@@ -1,26 +1,19 @@
 function adicionarTarefa() {
-    //let mensagem = "Tarefa adicionada com sucesso!";
 
-    //Acessa o input da tarefa
+    //Recebe o valor do input do usuário
     let inputTarefa = document.getElementById("inputTarefa")
-
-    //pega o valor do input da tarefa
     let tarefa = inputTarefa.value
 
-    //adiciona a tarefa (valor do inputTarefa) ao paragrafo mensagem
+    //Cria novo item (li) e insere na (lista ul)
     document.getElementById("mensagem").textContent = tarefa;
-
-    //Acesso á lista (ul) no HTML
     let listaTarefas = document.getElementById("listaTarefas")
-
-    //Cria um tópico á lista (li) no HTML
     let novaTarefa = document.createElement("li")
-
-    //Adiciona a tarefa (valor do inputTarefa) ao tópico (li)
     novaTarefa.textContent = tarefa
-
-    //Adiciona o tópico "li" (Elemento filho/ novaTarefa) na lista "ul" (Elemento pai/ listaTarefas)
     listaTarefas.appendChild(novaTarefa)
+
+    //mensagem de tarefa adicionada com sucesso
+    let mensagem = "Tarefa adicionada com sucesso!"
+    document.getElementById("mensagem").textContent = mensagem
 
     //Limpa o input
     inputTarefa.value = ""
